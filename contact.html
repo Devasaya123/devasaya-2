@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Reach the Devasaya atelier — for enquiries, custom commissions and bulk orders." />
+  <link rel="icon" href="https://customer-assets.emergentagent.com/job_ajrakh-artistry/artifacts/f8iwx5x9_ChatGPT_Image_Apr_20__2026__12_35_22_AM-removebg-preview.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Contact — Devasaya</title>
+</head>
+<body>
+  <div id="root" style="display:none"></div>
+  <div id="header"></div>
+
+  <main class="contact container" data-testid="contact-page">
+    <div class="section-head center">
+      <p class="eyebrow">Reach the Atelier</p>
+      <h1 class="serif huge">Let's talk cloth</h1>
+      <p class="muted" style="max-width:42rem;margin:1rem auto 0;">For enquiries, custom commissions, bulk orders or simply to say namaste — we'd love to hear from you.</p>
+    </div>
+
+    <div class="contact-grid">
+      <aside data-testid="contact-info">
+        <div class="info-block">
+          <p class="eyebrow">Atelier</p>
+          <p class="serif">Bhuj, Kutch · Gujarat, India</p>
+        </div>
+        <div class="info-block">
+          <p class="eyebrow">Phone &amp; WhatsApp</p>
+          <p class="serif"><a href="https://wa.me/919340853746" target="_blank" rel="noreferrer" data-testid="contact-whatsapp">+91 93408 53746</a></p>
+        </div>
+        <div class="info-block">
+          <p class="eyebrow">Email</p>
+          <p class="serif"><a href="mailto:devasaya.24@gmail.com" data-testid="contact-email">devasaya.24@gmail.com</a></p>
+        </div>
+        <div class="info-block">
+          <p class="eyebrow">Instagram</p>
+          <p class="serif"><a href="https://instagram.com/_devasaya_" target="_blank" rel="noreferrer">_devasaya_</a></p>
+        </div>
+        <div class="info-block">
+          <p class="eyebrow">Hours</p>
+          <p class="muted">Mon – Sat · 10:00 to 19:00 IST</p>
+        </div>
+      </aside>
+
+      <form class="contact-form" id="contact-form" data-testid="contact-form">
+        <label>
+          <span class="eyebrow">Your Name</span>
+          <input type="text" name="name" required data-testid="contact-name" />
+        </label>
+        <div class="row-2">
+          <label>
+            <span class="eyebrow">Email</span>
+            <input type="email" name="email" required data-testid="contact-email-input" />
+          </label>
+          <label>
+            <span class="eyebrow">Phone (optional)</span>
+            <input type="tel" name="phone" data-testid="contact-phone" />
+          </label>
+        </div>
+        <label>
+          <span class="eyebrow">Message</span>
+          <textarea name="message" rows="6" required data-testid="contact-message"></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary" data-testid="contact-submit">Send Enquiry</button>
+        <p class="form-note small muted" id="form-note" hidden></p>
+      </form>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+  <script src="script.js"></script>
+</body>
+</html>
