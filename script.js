@@ -13,16 +13,6 @@ const LOGO_URL = "https://customer-assets.emergentagent.com/job_ajrakh-artistry/
 
 /* ============= Product catalogue (edit here to add/remove pieces) ============= */
 const PRODUCTS = [
-  // SAREES
-  { id: "p1", name: "Indigo Sky Ajrakh Saree", category: "Sarees", price: 8500,
-    fabric: "Hand-block printed Modal Silk", sizes: ["Free Size"],
-    desc: "A meditation in indigo and madder. Each motif is hand-stamped with carved teakwood blocks across sixteen stages of natural dyeing.",
-    img: "https://images.unsplash.com/photo-1768803968260-3dab844c1476?crop=entropy&cs=srgb&fm=jpg&w=900" },
-  { id: "p2", name: "Madder Earth Saree", category: "Sarees", price: 9200,
-    fabric: "Pure Cotton", sizes: ["Free Size"],
-    desc: "Earthy madder root and pomegranate rind lend this saree its warm, sun-baked palette. A homage to the Kutch desert at dusk.",
-    img: "https://images.unsplash.com/photo-1766043071333-5d82991da1ea?crop=entropy&cs=srgb&fm=jpg&w=900" },
-
   // SHIRTS — ₹2500 · L–XXXL
   { id: "s1", name: "Madder Oversized Shirt", category: "Shirts", price: 2500,
     fabric: "Hand-block printed Cotton", sizes: ["L","XL","XXL","XXXL"],
@@ -45,27 +35,52 @@ const PRODUCTS = [
     desc: "A grounding onyx-and-ivory shirt printed with classical Sindhi motifs and feather borders.",
     img: "https://customer-assets.emergentagent.com/job_ajrakh-artistry/artifacts/luutj7r8_WhatsApp%20Image%202026-05-01%20at%206.36.28%20PM.jpeg" },
 
-  // CORDSETS — ₹3500 · XL & XXL
+  // CORDSETS — ₹3500 · M–XXL
   { id: "c1", name: "Saffron Ochre Cordset", category: "Cordsets", price: 3500,
-    fabric: "Hand-block printed Cotton", sizes: ["XL","XXL"],
+    fabric: "Hand-block printed Cotton", sizes: ["M","L","XL","XXL"],
     desc: "Hand-block printed cotton cordset in radiant ochre and emerald — co-ordinated kurta with relaxed wide-leg pant.",
     img: "https://customer-assets.emergentagent.com/job_ajrakh-artistry/artifacts/7f2rh6z6_Gemini_Generated_Image_h7t3rxh7t3rxh7t3.png" },
   { id: "c2", name: "Charcoal Bloom Cordset", category: "Cordsets", price: 3500,
-    fabric: "Hand-block printed Cotton", sizes: ["XL","XXL"],
+    fabric: "Hand-block printed Cotton", sizes: ["M","L","XL","XXL"],
     desc: "A grounding charcoal-and-madder cordset with three-quarter sleeves and flared palazzo.",
     img: "https://customer-assets.emergentagent.com/job_ajrakh-artistry/artifacts/1tewv3fz_Gemini_Generated_Image_27hjdi27hjdi27hj.png" },
   { id: "c3", name: "Midnight Leaf Cordset", category: "Cordsets", price: 3500,
-    fabric: "Hand-block printed Cotton", sizes: ["XL","XXL"],
+    fabric: "Hand-block printed Cotton", sizes: ["M","L","XL","XXL"],
     desc: "Indigo and madder leaves on a deep ink ground — V-neck kurta paired with breezy wide-leg pant.",
     img: "https://customer-assets.emergentagent.com/job_ajrakh-artistry/artifacts/dzvp649z_Gemini_Generated_Image_d257txd257txd257%20%281%29.png" },
   { id: "c4", name: "Ivory Vine Cordset", category: "Cordsets", price: 3500,
-    fabric: "Hand-block printed Cotton", sizes: ["XL","XXL"],
+    fabric: "Hand-block printed Cotton", sizes: ["M","L","XL","XXL"],
     desc: "Ivory ground laced with indigo paisley vines — an heirloom cordset for sun-warmed afternoons.",
     img: "https://customer-assets.emergentagent.com/job_ajrakh-artistry/artifacts/99qn0c3x_Gemini_Generated_Image_npgu4cnpgu4cnpgu.png" },
   { id: "c5", name: "Teal Garden Cordset", category: "Cordsets", price: 3500,
-    fabric: "Hand-block printed Cotton", sizes: ["XL","XXL"],
+    fabric: "Hand-block printed Cotton", sizes: ["M","L","XL","XXL"],
     desc: "Teal botanical block-print on soft cotton — a cordset that moves with the breeze of a courtyard.",
     img: "https://customer-assets.emergentagent.com/job_ajrakh-artistry/artifacts/jhwxgnps_Gemini_Generated_Image_phpuf6phpuf6phpu.png" },
+
+  // Additional cordsets — from the Devasaya atelier lookbook
+  ...(() => {
+    const items = [
+      ["Terracotta Bloom Cordset", "Sun-warmed terracotta ground patterned with soft grey blooms — co-ordinated kurta with relaxed wide-leg pant."],
+      ["Teal Gilded Cordset", "Deep teal traced with delicate gold florals — a cordset that catches lamplight like a courtyard at dusk."],
+      ["Ochre Geometry Cordset", "Sun-baked ochre cordset patterned with teal Ajrakh geometry — graphic, grounded, generous."],
+      ["Charcoal Geometry Cordset", "Charcoal ground printed in muted Ajrakh geometry — a quiet, considered cordset for slow afternoons."],
+      ["Onyx Lattice Cordset", "Onyx black latticed with restrained Ajrakh motifs — heirloom-grade calm in a single silhouette."],
+      ["Madder Heritage Cordset", "Deep madder red printed with classical heritage motifs — a cordset that reads like an old hymn."],
+      ["Ivory Atelier Cordset", "Soft ivory laced with intricate Ajrakh geometry — luminous, breezy, gallery-grade."],
+      ["Navy Bloom Cordset", "Deep navy scattered with madder and indigo florals — a cordset made for cooler verandahs."],
+      ["Deep Teal Bloom Cordset", "Rich teal flowering with gold botanical motifs — a slow, courtly statement piece."],
+    ];
+    return items.map(([name, desc], i) => ({
+      id: "c" + (i + 6),
+      name,
+      category: "Cordsets",
+      price: 3500,
+      fabric: "Hand-block printed Cotton",
+      sizes: ["M","L","XL","XXL"],
+      desc,
+      img: "images/cordset-" + String(i).padStart(3, "0") + ".jpg",
+    }));
+  })(),
 
   // KAFTANS — ₹2500 · Free Size
   { id: "k1", name: "Mihrab Indigo Kaftan", category: "Kaftans", price: 2500,
@@ -89,15 +104,91 @@ const PRODUCTS = [
     desc: "A madder-red kaftan with onyx borders and sea-blue tassels — made for long afternoons in the shade of a bougainvillea.",
     img: "https://customer-assets.emergentagent.com/job_ajrakh-artistry/artifacts/6uwqx28b_Gemini_Generated_Image_61p0fs61p0fs61p0.png" },
 
-  // MODAL 3 PIECE SUITS
-  { id: "m1", name: "Saanjh Modal 3-Piece Suit", category: "Modal 3 Piece Suits", price: 12500,
-    fabric: "Hand-block printed Modal Silk", sizes: ["S","M","L","XL"],
-    desc: "A complete three-piece ensemble — kurta, pant and dupatta — in lustrous modal silk, hand-block printed in classic indigo and madder.",
-    img: "https://images.unsplash.com/photo-1764583473949-4645bbb6a2d0?crop=entropy&cs=srgb&fm=jpg&w=900" },
-  { id: "m2", name: "Heritage Modal 3-Piece Suit", category: "Modal 3 Piece Suits", price: 13800,
-    fabric: "Modal Silk", sizes: ["S","M","L","XL"],
-    desc: "An heirloom-grade modal silk three-piece suit — kurta, churidar and dupatta — finished with hand-knotted tassels and traditional Khatri motifs.",
-    img: "https://images.unsplash.com/photo-1766043071333-5d82991da1ea?crop=entropy&cs=srgb&fm=jpg&w=900" },
+  // ADDITIONAL KAFTANS (lookbook) — ₹3500 · Free Size
+  ...(() => {
+    const items = [
+      ["Crimson Saffron Stripe Kaftan", "A vermilion kaftan ribboned with saffron stripes — a quiet echo of a Kutch sunset over the salt flats."],
+      ["Onyx Polka Kaftan", "Deep onyx ground sprinkled with ivory polka — a kaftan that wears like a starlit desert night."],
+      ["Aubergine Ochre Kaftan", "Royal aubergine veiled in ochre motifs — heirloom-grade slow luxury for unhurried evenings."],
+      ["Mustard Mosaic Kaftan", "Mustard ground laced with geometric tile-work — sunlit warmth in a single silhouette."],
+      ["Madder Onyx Stripe Kaftan", "Madder red banded with onyx stripes — a graphic, grounding kaftan with quiet drama."],
+      ["Indigo Bloom Kaftan", "Deep indigo printed with a soft bloom of natural florals — gentle, flowing, eternal."],
+      ["Plum Leaf Kaftan", "A regal plum kaftan patterned with feathered leaves — restful, romantic, slow."],
+      ["Saffron Bloom Kaftan", "Saffron yellow scattered with tiny ivory blooms — a kaftan made for a sun-warmed verandah."],
+      ["Onyx Heritage Stripe Kaftan", "Classical onyx-and-bone stripe with heritage Ajrakh borders — graphic poise, made by hand."],
+      ["Midnight Paisley Kaftan", "Midnight black flowing with paisley vines in indigo and madder — quiet, courtly, timeless."],
+      ["Plum Lotus Kaftan", "Deep plum ground anchored by a hand-stitched lotus appliqué — ceremonial in feel, daily in wear."],
+      ["Ochre Heritage Kaftan", "Sun-baked ochre printed with intricate Khatri motifs — a kaftan that reads like an old prayer."],
+      ["Amber Dot Kaftan", "Warm amber ground dotted with ivory — soft, sunlit, easy."],
+      ["Onyx Geometry Kaftan", "Onyx black framed with geometric Ajrakh borders — graphic and gallery-grade."],
+      ["Earthen Leaf Kaftan", "Earthy walnut brown patterned with leaf motifs — quiet, grounded, monsoon-soft."],
+      ["Aubergine Gilded Kaftan", "Rich aubergine punctuated with ochre accents — a kaftan that catches lamplight like silk."],
+      ["Madder Lattice Kaftan", "Madder red latticed with intricate squares — a slow, considered statement piece."],
+      ["Charcoal Garden Kaftan", "Charcoal ground printed with delicate floral trees — a kaftan that feels like a moonlit garden."],
+    ];
+    return items.map(([name, desc], i) => ({
+      id: "k" + (i + 6),
+      name,
+      category: "Kaftans",
+      price: 3500,
+      fabric: "Hand-block printed Cotton",
+      sizes: ["Free Size"],
+      desc,
+      img: "images/kaftan-" + String(i).padStart(3, "0") + ".jpg",
+    }));
+  })(),
+
+  // MODAL SILK KURTIS — ₹3500 · S–XXL
+  ...Array.from({ length: 17 }, (_, i) => ({
+    id: "msk" + (i + 1),
+    name: [
+      "Mustard Bloom Modal Kurti", "Onyx Stripe Modal Kurti", "Maroon Heritage Modal Kurti",
+      "Indigo Cream Modal Kurti", "Onyx Mandala Modal Kurti", "Crimson Mandala Modal Kurti",
+      "Saffron Mandala Modal Kurti", "Crimson Geometry Modal Kurti", "Indigo Geometry Modal Kurti",
+      "Onyx Paisley Modal Kurti", "Maroon Paisley Modal Kurti", "Navy Paisley Modal Kurti",
+      "Mustard Paisley Modal Kurti", "Onyx Tribal Modal Kurti", "Crimson Tribal Modal Kurti",
+      "Indigo Tribal Modal Kurti", "Onyx Heritage Modal Kurti",
+    ][i],
+    category: "Modal Silk Kurtis",
+    price: 3500,
+    fabric: "Hand-block printed Modal Silk",
+    sizes: ["M","L","XL","XXL"],
+    desc: "Hand-block printed modal silk kurti from the Devasaya atelier — a flowing silhouette with traditional Khatri motifs and contemporary ease.",
+    img: "images/kurti-" + String(i).padStart(3, "0") + ".jpg",
+  })),
+
+  // COTTON AJRAKH KURTIS — ₹2500 · M–XXL
+  ...(() => {
+    const items = [
+      ["Ochre Mihrab Cotton Kurti", "Sun-baked ochre ground anchored by an indigo mihrab yoke — a kurti that reads like a Kutch afternoon."],
+      ["Rust Bloom Cotton Kurti", "Deep rust ground embroidered with crimson blooms — warm, grounding, made for unhurried days."],
+      ["Indigo Geometry Cotton Kurti", "Classic indigo printed with crisp geometric Ajrakh motifs — graphic, easy, eternal."],
+      ["Mustard Tribal Cotton Kurti", "Mustard ground patterned with tribal block-print — sunlit and unapologetic."],
+      ["Onyx Tribal Cotton Kurti", "Onyx black layered with bold tribal motifs — quiet drama in a single silhouette."],
+      ["Madder Bloom Cotton Kurti", "Madder red strewn with hand-block florals — a kurti that carries the warmth of the dye-vat."],
+      ["Ochre Leaf Cotton Kurti", "Ochre ground tracing delicate leaf motifs — a kurti that feels like a morning under the neem tree."],
+      ["Indigo Tribal Cotton Kurti", "Deep indigo printed with bold tribal geometry — heirloom-grade Ajrakh, daily wear."],
+      ["Onyx Patchwork Cotton Kurti", "Onyx ground with a hand-pieced patchwork yoke — slow craft layered with quiet detail."],
+      ["Azure Geometry Cotton Kurti", "Cool azure printed with crisp geometric blocks — a breath of monsoon sky."],
+      ["Emerald Geometry Cotton Kurti", "Emerald green block-printed in measured geometry — a kurti as still as a stepwell."],
+      ["Onyx Lattice Cotton Kurti", "Onyx ground latticed with bone-white geometry — graphic, gallery-grade calm."],
+      ["Madder Paisley Cotton Kurti", "Madder ground flowing with indigo paisley vines — a slow, courtyard kind of beauty."],
+      ["Onyx Paisley Cotton Kurti", "Onyx black laced with crimson paisley — heirloom Ajrakh, made for long evenings."],
+      ["Navy Folk Cotton Kurti", "Navy ground printed with folk motifs of figure and flora — a kurti carrying old stories."],
+      ["Maroon Tribal Cotton Kurti", "Warm maroon with bold tribal Ajrakh prints — grounding, generous, slow."],
+      ["Teal Atelier Cotton Kurti", "Deep teal finished with hand-embroidered yoke detail — a quiet showpiece for everyday."],
+    ];
+    return items.map(([name, desc], i) => ({
+      id: "cak" + (i + 1),
+      name,
+      category: "Cotton Ajrakh Kurtis",
+      price: 2500,
+      fabric: "Hand-block printed Pure Cotton",
+      sizes: ["M","L","XL","XXL"],
+      desc,
+      img: "images/cotton-kurti-" + String(i).padStart(3, "0") + ".jpg",
+    }));
+  })(),
 ];
 
 /* ============= Inject shared header & footer ============= */

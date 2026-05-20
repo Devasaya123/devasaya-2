@@ -12,11 +12,12 @@
   <title>Devasaya — Ajrakh, an Ancient Art of Timeless Elegance</title>
 </head>
 <body>
-  <div id="header"></div>
+  <div id="root" style="display:none"></div>
+  <div id="header" data-testid="site-header"></div>
 
   <main>
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" data-testid="hero-section">
       <img src="https://customer-assets.emergentagent.com/job_ajrakh-artistry/artifacts/8tbo8tr8_02-3.jpg" alt="Ajrakh artisan dyeing fabric" class="hero-img" />
       <div class="hero-overlay"></div>
       <div class="hero-content container">
@@ -24,8 +25,8 @@
         <h1 class="serif">Ajrakh —<br /><em>an ancient art of timeless elegance.</em></h1>
         <p class="hero-sub">Reviving the heritage of Kutch, Gujarat through intricate block-printed textiles.</p>
         <div class="cta-row">
-          <a href="shop.html" class="btn btn-ivory">Explore the Collection</a>
-          <a href="story.html" class="btn btn-outline-ivory">Read the Story</a>
+          <a href="shop.html" class="btn btn-ivory" data-testid="hero-shop-btn">Explore the Collection</a>
+          <a href="story.html" class="btn btn-outline-ivory" data-testid="hero-story-btn">Read the Story</a>
         </div>
       </div>
     </section>
@@ -80,7 +81,7 @@
     </section>
   </main>
 
-  <div id="footer"></div>
+  <div id="footer" data-testid="site-footer"></div>
   <script src="script.js"></script>
 </body>
 </html>

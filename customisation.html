@@ -3,35 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Customisation and bulk Ajrakh commissions — bespoke colourways, sizing, gifting and corporate orders." />
   <link rel="icon" href="https://customer-assets.emergentagent.com/job_ajrakh-artistry/artifacts/f8iwx5x9_ChatGPT_Image_Apr_20__2026__12_35_22_AM-removebg-preview.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <title>Customisation & Bulk Orders — Devasaya</title>
+  <title>Customisation &amp; Bulk — Devasaya</title>
 </head>
 <body>
+  <div id="root" style="display:none"></div>
   <div id="header"></div>
-  <main>
-    <section class="customisation container">
-      <div class="section-head center">
-        <p class="eyebrow">For Brands &amp; Boutiques</p>
-        <h1 class="serif huge">Bulk Stitching &amp; Customisation</h1>
-        <p class="serif italic madder bigger">Tailored solutions for your brand.</p>
+
+  <main class="customisation container" data-testid="customisation-page">
+    <div class="section-head center">
+      <p class="eyebrow">Customisation &amp; Bulk</p>
+      <h1 class="serif huge">Cloth, crafted for you.</h1>
+    </div>
+
+    <p class="intro center">
+      Whether it is a bespoke colourway for your wedding trousseau, a curated gifting suite for your atelier, or a small run of uniforms for your café — our karigars love a slow, considered commission. Please allow four to eight weeks for custom pieces.
+    </p>
+
+    <div class="services-grid">
+      <div class="service" data-testid="service-bespoke">
+        <h3 class="serif">Bespoke Pieces</h3>
+        <p>One-of-a-kind sarees, kurtas and dupattas in colourways chosen by you — drawn from our natural-dye palette of indigo, madder, ochre and onyx.</p>
       </div>
-      <p class="intro center">At <span class="serif indigo bigger">Devasaya</span>, we go beyond ready-to-wear. We offer end-to-end bulk stitching and customisation services designed for brands, boutiques, and businesses seeking distinctive, handcrafted apparel rooted in authentic Ajrakh artistry.</p>
-      <div class="services-grid">
-        <div class="service"><h3 class="serif">Bulk Production</h3><p>Whether you're launching a new collection or scaling your inventory, we handle bulk stitching with consistency, quality, and timely delivery.</p></div>
-        <div class="service"><h3 class="serif">Custom Design Development</h3><p>From fabric selection to final silhouettes, we collaborate closely to bring your vision to life — be it kaftans, shirts, coord sets, kurtas, or bespoke designs.</p></div>
-        <div class="service"><h3 class="serif">Ajrakh Print Integration</h3><p>Choose from our curated Ajrakh prints or develop exclusive patterns tailored to your brand identity.</p></div>
-        <div class="service"><h3 class="serif">Size &amp; Fit Customisation</h3><p>We offer flexible sizing options to cater to diverse customer segments, ensuring comfort and precision in every piece.</p></div>
+      <div class="service" data-testid="service-wedding">
+        <h3 class="serif">Wedding &amp; Trousseau</h3>
+        <p>Heirloom-grade modal silk three-piece suits, dupattas and lehenga panels — block-printed in motifs that carry the meaning of your family.</p>
       </div>
-      <div class="center cta-row" style="margin-top:2.5rem; justify-content:center;">
-        <a class="btn btn-madder" href="https://wa.me/919340853746?text=Namaste%20Devasaya%2C%20I%27d%20like%20to%20discuss%20a%20bulk%20order." target="_blank" rel="noreferrer">Enquire on WhatsApp</a>
-        <a class="btn btn-outline" href="contact.html">Write to us →</a>
+      <div class="service" data-testid="service-corporate">
+        <h3 class="serif">Corporate &amp; Hospitality</h3>
+        <p>Bulk runs of cushion covers, table runners, stoles and uniforms for hotels, restaurants and brand experiences rooted in conscious craft.</p>
       </div>
-    </section>
+      <div class="service" data-testid="service-gifting">
+        <h3 class="serif">Curated Gifting</h3>
+        <p>Custom gifting suites for weddings, festivals and corporate occasions — wrapped in handmade khadi paper with handwritten notes.</p>
+      </div>
+      <div class="service" data-testid="service-resize">
+        <h3 class="serif">Size &amp; Silhouette</h3>
+        <p>Every silhouette can be tailored to your measurements — sleeve length, neck shape, kurta length, palazzo width — we'll cut to fit.</p>
+      </div>
+      <div class="service" data-testid="service-private">
+        <h3 class="serif">Private Label</h3>
+        <p>Designers and boutique brands are welcome to commission small private-label collections under their own label, made by our karigars.</p>
+      </div>
+    </div>
+
+    <div class="center" style="margin-top:3rem;">
+      <a href="contact.html" class="btn btn-madder" data-testid="customisation-cta">Begin a Commission</a>
+    </div>
   </main>
+
   <div id="footer"></div>
   <script src="script.js"></script>
 </body>

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sustainability at Devasaya — natural dyes, fair artisan wages, slow craft and zero-synthetic textiles." />
   <link rel="icon" href="https://customer-assets.emergentagent.com/job_ajrakh-artistry/artifacts/f8iwx5x9_ChatGPT_Image_Apr_20__2026__12_35_22_AM-removebg-preview.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,23 +12,44 @@
   <title>Sustainability — Devasaya</title>
 </head>
 <body>
+  <div id="root" style="display:none"></div>
   <div id="header"></div>
-  <main>
-    <section class="sustainability container">
-      <div class="section-head center">
-        <p class="eyebrow">Sustainability &amp; Values</p>
-        <h1 class="serif huge">A quieter kind of luxury</h1>
-        <p class="italic muted">We believe the most radical thing a brand can do today is slow down.</p>
+
+  <main class="sustainability container" data-testid="sustainability-page">
+    <div class="section-head center">
+      <p class="eyebrow">Our Promise</p>
+      <h1 class="serif huge">Sustainable by tradition.</h1>
+      <p class="muted" style="max-width:42rem;margin:1rem auto 0;">Ajrakh has been sustainable for five thousand years — long before the word was fashionable. We simply refuse to compromise it.</p>
+    </div>
+
+    <div class="values-grid">
+      <div class="value">
+        <h3 class="serif">Only Natural Dyes</h3>
+        <p>Indigo, madder root, pomegranate rind, harde, alum, iron — every colour at Devasaya comes from the earth. We have never used synthetic or azo dyes, and we never will.</p>
       </div>
-      <div class="values-grid">
-        <div class="value"><h3 class="serif">Natural Dyes Only</h3><p>Indigo, madder root, pomegranate rind, turmeric, iron filings — every pigment we use comes from the earth and returns to it.</p></div>
-        <div class="value"><h3 class="serif">Water-Conscious</h3><p>Wastewater is filtered through reed beds before it returns to the soil. No chemical effluent leaves our workshop.</p></div>
-        <div class="value"><h3 class="serif">Fair Wages</h3><p>Our artisans set their own pace and price. We pay above the regional average and ensure year-round work.</p></div>
-        <div class="value"><h3 class="serif">Made to Outlast</h3><p>An Ajrakh saree, well kept, will outlive its owner. Slow fashion is a refusal of waste.</p></div>
+      <div class="value">
+        <h3 class="serif">Skin-Safe Cloth</h3>
+        <p>Our natural dyes are non-toxic, hypo-allergenic and gentle even on the softest skin. Devasaya cloth is safe for children, expecting mothers and sensitive wearers.</p>
       </div>
-      <blockquote class="serif italic huge-quote center" style="margin-top:3rem">"We do not chase trends — we tend to a tradition."</blockquote>
-    </section>
+      <div class="value">
+        <h3 class="serif">Fair Artisan Wages</h3>
+        <p>We work directly with master karigars and pay above-market wages. Every piece is signed by the hand that printed it, and our karigars are equity partners in the studio.</p>
+      </div>
+      <div class="value">
+        <h3 class="serif">Slow, Small Batches</h3>
+        <p>No machine-printing. No factory overruns. We make only what our karigars can hand-print in a season — every Devasaya piece is, by definition, a limited edition.</p>
+      </div>
+      <div class="value">
+        <h3 class="serif">Water-Conscious</h3>
+        <p>Our wash effluent is filtered through ash, sand and lime beds before returning to the soil — and we collect rainwater for the dye-vats whenever the monsoon permits.</p>
+      </div>
+      <div class="value">
+        <h3 class="serif">Biodegradable, Always</h3>
+        <p>Cotton, modal silk, natural dye, cotton thread, jute trims. Should a Devasaya piece ever return to the earth, it returns gracefully — no microplastics, no residue.</p>
+      </div>
+    </div>
   </main>
+
   <div id="footer"></div>
   <script src="script.js"></script>
 </body>
